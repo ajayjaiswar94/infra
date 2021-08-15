@@ -1,0 +1,4 @@
+- name : "create Ec2 instance"
+  hosts : localhost
+  roles : 
+   - role : CREATE-EC2

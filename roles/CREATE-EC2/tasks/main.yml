@@ -1,0 +1,14 @@
+---
+# tasks file for CREATE-EC2
+#
+#
+
+- ec2:
+    region: us-west-1
+    key_name: jenkins-2-lab
+    instance_type: t2.micro
+    image: ami-04b6c97b14c54de18
+    wait: yes
+    group: "DEVSG"
+    vpc_subnet_id: subnet-0a51abde5eb72aa17
+    assign_public_ip: yes
