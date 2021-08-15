@@ -2,13 +2,16 @@
 # tasks file for CREATE-EC2
 #
 #
+- name : "read the env"
+  include_vars : 
+   file : "vars/{{ PROJECT }}_{{ ENV }}.yml"
 
 - ec2:
-    region: us-west-1
-    key_name: jenkins-2-lab
+    region: "{{ REGION }}"
+    key_name: "{{ KEYNAME }}"
     instance_type: t2.micro
-    image: ami-04b6c97b14c54de18
+    image: "{{ IMAGE }}"
     wait: yes
-    group: "DEVSG"
-    vpc_subnet_id: subnet-0a51abde5eb72aa17
+    group: "{{ SGROUP }}"
+    vpc_subnet_id: "{{ SUBID }}"
     assign_public_ip: yes

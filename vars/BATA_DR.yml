@@ -1,0 +1,5 @@
+REGION : us-west-1
+KEYNAME : jenkins-2-lab
+IMAGE : ami-04b6c97b14c54de18
+SGROUP : "DRSG"
+SUBID : subnet-0988c15c9939baaa8
